@@ -80,9 +80,6 @@ Below is an example configuration object for integrating the MCP File Server wit
     "file-server": {
       "command": "node",
       "args": ["/path/to/mcp-file-server/mcp_server.js"],
-      "env": {
-        "BASE_DIRECTORY": "/path/to/file-storage"
-      },
       "disabled": false,
       "autoApprove": ["list_files", "read_file", "write_file", "delete_file", "set_base_directory", "get_base_directory"]
     }
@@ -96,8 +93,6 @@ Below is an example configuration object for integrating the MCP File Server wit
 - `file-server`: A unique identifier for this particular MCP server
 - `command`: The command to execute (in this case, `node` to run the JavaScript file)
 - `args`: Array of arguments to pass to the command (the path to your server script)
-- `env`: Environment variables to set when running the server
-  - `BASE_DIRECTORY`: Sets the initial base directory for file operations. Replace `/path/to/file-storage` with the absolute path to the directory where you want to store and access files. This can be anywhere on your system where the process has read/write permissions.
 - `disabled`: Whether this server is currently disabled (false = enabled)
 - `autoApprove`: List of tools that should be auto-approved without requiring user confirmation
 
