@@ -67,9 +67,9 @@ Below is an example configuration object for integrating the MCP File Server wit
   "mcpServers": {
     "file-server": {
       "command": "node",
-      "args": ["D:/My_World/mcp/azureDevops/mcp-file-server/mcp_server.js"],
+      "args": ["/path/to/mcp-file-server/mcp_server.js"],
       "env": {
-        "BASE_DIRECTORY": "D:/My_World/mcp/azureDevops/mcp-file-server"
+        "BASE_DIRECTORY": "/path/to/mcp-file-server/files"
       },
       "disabled": false,
       "autoApprove": ["list_files", "read_file", "write_file", "delete_file"]
