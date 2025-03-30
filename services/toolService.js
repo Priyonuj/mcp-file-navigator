@@ -1,5 +1,6 @@
 // services/toolService.js
 import { z } from 'zod';
+import path from 'path'; // Added the path import that was missing
 
 /**
  * Service for registering MCP tools

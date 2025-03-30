@@ -79,3 +79,70 @@
 [2025-03-30T14:23:17.779Z] Using BASE_DIRECTORY: D:/My_World/mcp/azureDevops/mcp-file-server
 [2025-03-30T14:23:17.781Z] Connecting to transport...
 [2025-03-30T14:23:17.782Z] Server successfully connected and started
+[2025-03-30T14:23:49.823Z] Logger initialized
+[2025-03-30T14:23:49.825Z] Starting MCP server...
+[2025-03-30T14:23:49.826Z] Directory ensured at: D:/My_World/mcp/azureDevops/mcp-file-server
+[2025-03-30T14:23:49.826Z] Using BASE_DIRECTORY: D:/My_World/mcp/azureDevops/mcp-file-server
+[2025-03-30T14:23:49.828Z] Connecting to transport...
+[2025-03-30T14:23:49.828Z] Server successfully connected and started
+[2025-03-30T14:23:52.850Z] Logger initialized
+[2025-03-30T14:23:52.851Z] Starting MCP server...
+[2025-03-30T14:23:52.852Z] Directory ensured at: D:/My_World/mcp/azureDevops/mcp-file-server
+[2025-03-30T14:23:52.852Z] Using BASE_DIRECTORY: D:/My_World/mcp/azureDevops/mcp-file-server
+[2025-03-30T14:23:52.853Z] Connecting to transport...
+[2025-03-30T14:23:52.854Z] Server successfully connected and started
+[2025-03-30T14:24:16.704Z] git_command called with: {"command":"log"}
+[2025-03-30T14:24:16.704Z] Executing git command: git log in directory: D:/My_World/mcp/azureDevops/mcp-file-server
+[2025-03-30T14:24:16.770Z] Git command executed successfully.
+[2025-03-30T14:24:37.190Z] list_files called with: ""
+[2025-03-30T14:25:05.312Z] git_command called with: {"command":"log --author=\"Priyonuj Dey\""}
+[2025-03-30T14:25:05.312Z] Executing git command: git log --author="Priyonuj Dey" in directory: D:/My_World/mcp/azureDevops/mcp-file-server
+[2025-03-30T14:25:05.374Z] Git command executed successfully.
+[2025-03-30T14:25:37.424Z] git_command called with: {"command":"show 13782bce2667d56ab6ec4011861d49d96a914d1b"}
+[2025-03-30T14:25:37.424Z] Executing git command: git show 13782bce2667d56ab6ec4011861d49d96a914d1b in directory: D:/My_World/mcp/azureDevops/mcp-file-server
+[2025-03-30T14:25:37.490Z] Git command executed successfully.
+[2025-03-30T14:42:30.309Z] set_base_directory called with: "D:\\My_World\\mcp\\azureDevops\\mcp-server"
+[2025-03-30T14:42:30.309Z] Error in set_base_directory: path is not defined
+[2025-03-30T14:42:32.899Z] set_base_directory called with: "D:\\My_World\\mcp\\azureDevops\\mcp-server"
+[2025-03-30T14:42:32.899Z] Error in set_base_directory: path is not defined
+[2025-03-30T14:43:04.881Z] read_file called with: "services"
+[2025-03-30T14:43:08.127Z] read_file called with: "services/configService.js"
+[2025-03-30T14:43:11.744Z] read_file called with: "services/toolService.js"
+[2025-03-30T14:43:14.795Z] read_file called with: "services/fileService.js"
+[2025-03-30T14:43:17.468Z] read_file called with: "mcp_server.js"
+[2025-03-30T14:44:28.860Z] write_file called with path: "services/toolService.js"
+[2025-03-30T14:44:35.438Z] set_base_directory called with: "D:\\My_World\\mcp\\azureDevops\\mcp-server"
+[2025-03-30T14:44:35.438Z] Error in set_base_directory: path is not defined
+[2025-03-30T14:44:40.107Z] git_command called with: {"command":"status"}
+[2025-03-30T14:44:40.107Z] Executing git command: git status in directory: D:/My_World/mcp/azureDevops/mcp-file-server
+[2025-03-30T14:44:40.179Z] Git command executed successfully.
+[2025-03-30T14:44:43.433Z] read_file called with: "log/mcp_debug.log"
+[2025-03-30T14:44:49.902Z] read_file called with: "services/gitService.js"
+[2025-03-30T14:44:55.538Z] get_base_directory called
+[2025-03-30T14:45:06.037Z] write_file called with path: "set_base_dir_helper.js"
+[2025-03-30T14:45:16.324Z] write_file called with path: "FIX_SET_BASE_DIRECTORY.md"
+[2025-03-30T14:46:03.261Z] Logger initialized
+[2025-03-30T14:46:03.262Z] Starting MCP server...
+[2025-03-30T14:46:03.264Z] Directory ensured at: D:/My_World/mcp/azureDevops/mcp-file-server
+[2025-03-30T14:46:03.264Z] Using BASE_DIRECTORY: D:/My_World/mcp/azureDevops/mcp-file-server
+[2025-03-30T14:46:03.265Z] Connecting to transport...
+[2025-03-30T14:46:03.265Z] Server successfully connected and started
+[2025-03-30T14:46:05.974Z] Logger initialized
+[2025-03-30T14:46:05.975Z] Starting MCP server...
+[2025-03-30T14:46:05.976Z] Directory ensured at: D:/My_World/mcp/azureDevops/mcp-file-server
+[2025-03-30T14:46:05.976Z] Using BASE_DIRECTORY: D:/My_World/mcp/azureDevops/mcp-file-server
+[2025-03-30T14:46:05.977Z] Connecting to transport...
+[2025-03-30T14:46:05.978Z] Server successfully connected and started
+[2025-03-30T14:46:24.523Z] set_base_directory called with: "D:\\My_World\\mcp\\azureDevops\\mcp-server"
+[2025-03-30T14:46:24.524Z] Directory ensured at: D:\My_World\mcp\azureDevops\mcp-server
+[2025-03-30T14:46:24.524Z] Base directory changed from D:/My_World/mcp/azureDevops/mcp-file-server to D:\My_World\mcp\azureDevops\mcp-server
+[2025-03-30T14:47:20.160Z] list_files called with: "."
+[2025-03-30T14:47:22.395Z] list_files called with: "src"
+[2025-03-30T14:47:36.595Z] write_file called with path: "src/helpers/Helper.js"
+[2025-03-30T14:49:29.534Z] set_base_directory called with: "D:\\My_World\\mcp\\azureDevops\\mcp-file-server"
+[2025-03-30T14:49:29.535Z] Directory ensured at: D:\My_World\mcp\azureDevops\mcp-file-server
+[2025-03-30T14:49:29.535Z] Base directory changed from D:\My_World\mcp\azureDevops\mcp-server to D:\My_World\mcp\azureDevops\mcp-file-server
+[2025-03-30T14:49:32.376Z] list_files called with: "."
+[2025-03-30T14:49:51.246Z] write_file called with path: "helpers/Helper.js"
+[2025-03-30T14:52:45.090Z] read_file called with: "set_base_dir_helper.js"
+[2025-03-30T14:53:18.185Z] write_file called with path: "scripts/set_base_dir_helper.js"
