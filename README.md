@@ -208,10 +208,41 @@ Common issues:
 4. **Port Conflicts**: If you're running multiple MCP servers, ensure they're using different ports.
 5. **Invalid Base Directory**: When setting a base directory from chat, ensure you provide an absolute path (not relative).
 
-## License
-
-[Specify your license here]
-
 ## Contributing
 
-[Specify contribution guidelines here]
+We welcome contributions to improve the MCP File Server! Here's how you can help:
+
+### Ways to Contribute
+
+- **Bug Reports**: Submit detailed bug reports with steps to reproduce
+- **Feature Requests**: Suggest new features or improvements
+- **Documentation**: Help improve or extend the documentation
+- **Code Contributions**: Submit pull requests with bug fixes or new features
+
+### Development Process
+
+1. **Fork the Repository**: Create your own fork of the project
+2. **Create a Branch**: Make your changes in a new branch
+3. **Follow Coding Standards**: Maintain the existing code style
+4. **Write Tests**: Add tests for new features or bug fixes
+5. **Documentation**: Update documentation to reflect your changes
+6. **Submit a Pull Request**: Open a PR with a clear description of the changes
+
+### Pull Request Guidelines
+
+- Keep PRs focused on a single feature or bug fix
+- Include a clear description of what the changes do and why
+- Make sure all tests pass
+- Update relevant documentation
+
+### Reporting Issues
+
+When reporting issues, please include:
+- A clear description of the problem
+- Steps to reproduce the issue
+- Expected behavior vs. actual behavior
+- Environment details (OS, Node.js version, etc.)
+
+### Security Vulnerabilities
+
+If you discover a security vulnerability, please send an email to the project maintainers rather than opening a public issue.
