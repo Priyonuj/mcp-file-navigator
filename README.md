@@ -6,11 +6,13 @@ A secure file server implementation using the Model Context Protocol (MCP) that 
 
 MCP File Server is a Node.js application that implements an MCP server specifically for file operations. It provides a secure and standardized way to interact with the file system through the MCP protocol, suitable for integration with AI assistants like Claude and developer tools like Cursor.
 
-The server offers four primary file operation tools:
+The server offers the following file operation tools:
 - `list_files`: Lists files in a specified directory
 - `read_file`: Reads the content of a file
 - `write_file`: Writes content to a file
 - `delete_file`: Deletes a file or directory
+- `set_base_directory`: Sets the base directory for file operations directly from chat
+- `get_base_directory`: Gets the current base directory
 
 ## Security Features
 
@@ -58,6 +60,16 @@ npm start
 
 The server will run and connect to standard input/output for communication.
 
+### Setting Base Directory from Chat
+
+One of the key features of this implementation is the ability to set the base directory directly from the chat interface. This means you don't need to restart the server or modify configuration files to change where files are stored and accessed.
+
+Simply ask the AI assistant to set the base directory, for example:
+- "Set the base directory to C:/Users/username/Documents"
+- "Change the file storage location to /home/user/data"
+
+The assistant will use the `set_base_directory` tool to update the location. You can verify the current location at any time by asking for the current base directory.
+
 ### Configuration Object Example
 
 Below is an example configuration object for integrating the MCP File Server with Claude Desktop or Cursor:
@@ -69,10 +81,10 @@ Below is an example configuration object for integrating the MCP File Server wit
       "command": "node",
       "args": ["/path/to/mcp-file-server/mcp_server.js"],
       "env": {
-        "BASE_DIRECTORY": "/path/to/mcp-file-server/files"
+        "BASE_DIRECTORY": "/path/to/file-storage"
       },
       "disabled": false,
-      "autoApprove": ["list_files", "read_file", "write_file", "delete_file"]
+      "autoApprove": ["list_files", "read_file", "write_file", "delete_file", "set_base_directory", "get_base_directory"]
     }
   }
 }
@@ -85,7 +97,7 @@ Below is an example configuration object for integrating the MCP File Server wit
 - `command`: The command to execute (in this case, `node` to run the JavaScript file)
 - `args`: Array of arguments to pass to the command (the path to your server script)
 - `env`: Environment variables to set when running the server
-  - `BASE_DIRECTORY`: Sets the base directory for file operations
+  - `BASE_DIRECTORY`: Sets the initial base directory for file operations. Replace `/path/to/file-storage` with the absolute path to the directory where you want to store and access files. This can be anywhere on your system where the process has read/write permissions.
 - `disabled`: Whether this server is currently disabled (false = enabled)
 - `autoApprove`: List of tools that should be auto-approved without requiring user confirmation
 
@@ -106,6 +118,7 @@ To integrate MCP File Server with Claude Desktop:
 4. Restart Claude Desktop
 5. You should now see the file operations tools available in Claude's interface
 6. Test the connection by asking Claude to list files or read a file
+7. You can now set your base directory directly in chat with: "Set the base directory to /path/of/your/choice"
 
 ### Integrating with Cursor
 
@@ -123,8 +136,29 @@ To integrate MCP File Server with Cursor:
 4. Restart Cursor
 5. You can now use file operation commands within Cursor's AI assistant interface
 6. Test by asking the assistant to list files or read a specific file
+7. You can now set your base directory directly in chat with: "Set the base directory to /path/of/your/choice"
 
 ## API Reference
+
+### set_base_directory
+
+Sets a new base directory for file operations.
+
+**Parameters:**
+- `path`: The absolute path to the new base directory
+
+**Returns:**
+- Confirmation message
+
+### get_base_directory
+
+Gets the current base directory path.
+
+**Parameters:**
+- None
+
+**Returns:**
+- The current base directory path
 
 ### list_files
 
@@ -177,6 +211,7 @@ Common issues:
 2. **Connection Refused**: Make sure the server is running before attempting to connect.
 3. **Tool Not Found**: Verify that the tool names in your configuration match exactly with those defined in the server.
 4. **Port Conflicts**: If you're running multiple MCP servers, ensure they're using different ports.
+5. **Invalid Base Directory**: When setting a base directory from chat, ensure you provide an absolute path (not relative).
 
 ## License
 

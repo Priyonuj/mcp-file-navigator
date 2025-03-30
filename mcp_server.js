@@ -14,7 +14,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Configuration
-const BASE_DIRECTORY = process.env.BASE_DIRECTORY || path.join(__dirname, 'files');
+let BASE_DIRECTORY = process.env.BASE_DIRECTORY || path.join(__dirname, 'files');
 const LOG_FILE = path.join(__dirname, 'log/mcp_debug.log');
 
 // Create a log file stream
@@ -30,10 +30,10 @@ function logger(message) {
 }
 
 // Ensure the base directory exists
-async function ensureBaseDirectoryExists() {
+async function ensureBaseDirectoryExists(directoryPath) {
   try {
-    await fs.mkdir(BASE_DIRECTORY, { recursive: true });
-    logger(`Base directory ensured at: ${BASE_DIRECTORY}`);
+    await fs.mkdir(directoryPath, { recursive: true });
+    logger(`Base directory ensured at: ${directoryPath}`);
     return true;
   } catch (error) {
     logger(`Error ensuring base directory: ${error.message}`);
@@ -85,7 +85,7 @@ async function startMcpServer() {
     logger('Starting MCP server...');
     
     // Ensure base directory exists
-    const dirExists = await ensureBaseDirectoryExists();
+    const dirExists = await ensureBaseDirectoryExists(BASE_DIRECTORY);
     if (!dirExists) {
       logger('Failed to ensure base directory exists. Exiting.');
       process.exit(1);
@@ -108,6 +108,64 @@ async function startMcpServer() {
         }
       },
     });
+    
+    // New tool to set base directory
+    server.tool(
+      "set_base_directory",
+      "Set the base directory for file operations",
+      {
+        path: z.string().describe("Absolute path to the new base directory")
+      },
+      async ({ path: newBasePath }) => {
+        logger(`set_base_directory called with: ${JSON.stringify(newBasePath)}`);
+        
+        try {
+          // Validate the new path
+          if (!path.isAbsolute(newBasePath)) {
+            return {
+              content: [{ type: "text", text: `Error: Path must be absolute. Please provide a full path.` }]
+            };
+          }
+          
+          // Check if the path exists or can be created
+          const dirExists = await ensureBaseDirectoryExists(newBasePath);
+          if (!dirExists) {
+            return {
+              content: [{ type: "text", text: `Error: Could not create or access directory at: ${newBasePath}` }]
+            };
+          }
+          
+          // Update the base directory
+          const oldPath = BASE_DIRECTORY;
+          BASE_DIRECTORY = newBasePath;
+          
+          logger(`Base directory changed from ${oldPath} to ${BASE_DIRECTORY}`);
+          
+          return {
+            content: [{ type: "text", text: `Base directory successfully set to: ${BASE_DIRECTORY}` }]
+          };
+        } catch (error) {
+          logger(`Error in set_base_directory: ${error.message}`);
+          return {
+            content: [{ type: "text", text: `Error setting base directory: ${error.message}` }]
+          };
+        }
+      }
+    );
+
+    // Register get_base_directory tool
+    server.tool(
+      "get_base_directory",
+      "Get the current base directory for file operations",
+      {},
+      async () => {
+        logger(`get_base_directory called`);
+        
+        return {
+          content: [{ type: "text", text: `Current BASE_DIRECTORY: ${BASE_DIRECTORY}` }]
+        };
+      }
+    );
     
     // Register simple list_files tool
     server.tool(
