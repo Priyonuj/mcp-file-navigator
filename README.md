@@ -207,6 +207,3 @@ When reporting issues, please include:
 - Expected behavior vs. actual behavior
 - Environment details (OS, Node.js version, etc.)
 
-### Security Vulnerabilities
-
-If you discover a security vulnerability, please send an email to the project maintainers rather than opening a public issue.
