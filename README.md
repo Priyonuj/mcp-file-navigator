@@ -58,25 +58,71 @@ npm start
 
 The server will run and connect to standard input/output for communication.
 
+### Configuration Object Example
+
+Below is an example configuration object for integrating the MCP File Server with Claude Desktop or Cursor:
+
+```json
+{
+  "mcpServers": {
+    "file-server": {
+      "command": "node",
+      "args": ["D:/My_World/mcp/azureDevops/mcp-file-server/mcp_server.js"],
+      "env": {
+        "BASE_DIRECTORY": "D:/My_World/mcp/azureDevops/mcp-file-server"
+      },
+      "disabled": false,
+      "autoApprove": ["list_files", "read_file", "write_file", "delete_file"]
+    }
+  }
+}
+```
+
+**Explanation of configuration properties:**
+
+- `mcpServers`: Container for all MCP server configurations
+- `file-server`: A unique identifier for this particular MCP server
+- `command`: The command to execute (in this case, `node` to run the JavaScript file)
+- `args`: Array of arguments to pass to the command (the path to your server script)
+- `env`: Environment variables to set when running the server
+  - `BASE_DIRECTORY`: Sets the base directory for file operations
+- `disabled`: Whether this server is currently disabled (false = enabled)
+- `autoApprove`: List of tools that should be auto-approved without requiring user confirmation
+
 ### Integrating with Claude Desktop
 
-To use MCP File Server with Claude Desktop:
+To integrate MCP File Server with Claude Desktop:
 
-1. Start the MCP server
-2. Configure Claude Desktop to connect to the running server:
-   - Open Claude Desktop settings
-   - Navigate to the "Advanced" or "Integrations" section
-   - Enable "Custom Tool Integration"
-   - Point to the running MCP server
+1. Install Claude Desktop if you haven't already
+2. Start the MCP server or configure it to start automatically
+3. Configure Claude Desktop:
+   - Open Claude Desktop
+   - Click on Settings (gear icon)
+   - Select "MCP Tools" from the sidebar
+   - Click "Add MCP Server Configuration"
+   - Add the configuration similar to the example above
+   - Adjust paths to match your installation location
+   - Save the configuration
+4. Restart Claude Desktop
+5. You should now see the file operations tools available in Claude's interface
+6. Test the connection by asking Claude to list files or read a file
 
 ### Integrating with Cursor
 
-To use MCP File Server with Cursor:
+To integrate MCP File Server with Cursor:
 
-1. Start the MCP server
-2. In Cursor, open settings and navigate to AI integrations
-3. Configure the "Custom Tools" section to point to your running MCP server
-4. Ensure the connection URL matches your server's address
+1. Install Cursor if you haven't already
+2. Start the MCP server or configure it to start automatically
+3. Configure Cursor:
+   - Open Cursor
+   - Go to Settings > AI > MCP Configuration
+   - Add a new MCP server configuration
+   - Enter the configuration details similar to the example above
+   - Adjust paths to match your installation location
+   - Save the configuration
+4. Restart Cursor
+5. You can now use file operation commands within Cursor's AI assistant interface
+6. Test by asking the assistant to list files or read a specific file
 
 ## API Reference
 
@@ -124,6 +170,13 @@ Deletes a file or directory.
 ## Troubleshooting
 
 Check the log file at `log/mcp_debug.log` for detailed information about server operations and any errors that might occur.
+
+Common issues:
+
+1. **Path Access Errors**: Ensure the BASE_DIRECTORY is set to a location that the process has permission to access.
+2. **Connection Refused**: Make sure the server is running before attempting to connect.
+3. **Tool Not Found**: Verify that the tool names in your configuration match exactly with those defined in the server.
+4. **Port Conflicts**: If you're running multiple MCP servers, ensure they're using different ports.
 
 ## License
 
