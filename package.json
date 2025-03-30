@@ -1,19 +1,23 @@
 {
-    "name": "mcp-file-server",
-    "version": "1.0.0",
-    "description": "MCP server for file operations",
-    "main": "mcp_server.js",
-    "type": "module",
-    "scripts": {
-      "start": "node mcp_server.js"
-    },
-    "dependencies": {
-      "@modelcontextprotocol/sdk": "^1.8.0",
-      "mammoth": "^1.6.0",
-      "xlsx": "^0.18.5",
-      "zod": "^3.24.2"
-    },
-    "engines": {
-      "node": ">=16.0.0"
-    }
+  "name": "mcp-file-server",
+  "version": "1.0.0",
+  "description": "MCP server for file operations with Git command support",
+  "main": "mcp_server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node mcp_server.js",
+    "dev": "nodemon mcp_server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.8.0",
+    "mammoth": "^1.6.0",
+    "xlsx": "^0.18.5",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   }
+}

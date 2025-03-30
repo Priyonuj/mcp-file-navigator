@@ -16,3 +16,66 @@
 [2025-03-30T07:26:56.444Z] read_file called with: "log/mcp_debug.log"
 [2025-03-30T07:26:58.716Z] read_file called with: ".gitignore"
 [2025-03-30T07:28:17.333Z] write_file called with path: "README.md"
+[2025-03-30T07:30:14.012Z] read_file called with: "README.md"
+[2025-03-30T07:30:32.964Z] write_file called with path: "README.md"
+[2025-03-30T07:33:06.830Z] read_file called with: "README.md"
+[2025-03-30T07:33:25.390Z] write_file called with path: "README.md"
+[2025-03-30T07:48:55.015Z] read_file called with: "README.md"
+[2025-03-30T07:49:12.749Z] write_file called with path: "README.md"
+[2025-03-30T07:50:32.320Z] read_file called with: "mcp_server.js"
+[2025-03-30T07:51:11.089Z] write_file called with path: "mcp_server.js"
+[2025-03-30T07:51:14.543Z] read_file called with: "README.md"
+[2025-03-30T07:51:38.525Z] write_file called with path: "README.md"
+[2025-03-30T07:53:04.177Z] read_file called with: "README.md"
+[2025-03-30T07:53:26.268Z] write_file called with path: "README.md"
+[2025-03-30T07:57:26.174Z] read_file called with: "README.md"
+[2025-03-30T07:57:53.577Z] write_file called with path: "README.md"
+[2025-03-30T13:55:50.632Z] Starting MCP server...
+[2025-03-30T13:55:50.641Z] Base directory ensured at: D:/My_World/mcp/azureDevops/mcp-file-server
+[2025-03-30T13:55:50.641Z] Using BASE_DIRECTORY: D:/My_World/mcp/azureDevops/mcp-file-server
+[2025-03-30T13:55:50.644Z] Connecting to transport...
+[2025-03-30T13:55:50.645Z] Server successfully connected and started
+[2025-03-30T13:55:53.021Z] Starting MCP server...
+[2025-03-30T13:55:53.027Z] Base directory ensured at: D:/My_World/mcp/azureDevops/mcp-file-server
+[2025-03-30T13:55:53.027Z] Using BASE_DIRECTORY: D:/My_World/mcp/azureDevops/mcp-file-server
+[2025-03-30T13:55:53.029Z] Connecting to transport...
+[2025-03-30T13:55:53.030Z] Server successfully connected and started
+[2025-03-30T14:05:04.600Z] set_base_directory called with: "D:\\My_World\\mcp\\azureDevops\\mcp-file-server"
+[2025-03-30T14:05:04.601Z] Base directory ensured at: D:\My_World\mcp\azureDevops\mcp-file-server
+[2025-03-30T14:05:04.601Z] Base directory changed from D:/My_World/mcp/azureDevops/mcp-file-server to D:\My_World\mcp\azureDevops\mcp-file-server
+[2025-03-30T14:05:28.243Z] get_base_directory called
+[2025-03-30T14:07:55.948Z] read_file called with: "README.md"
+[2025-03-30T14:07:58.369Z] read_file called with: "mcp_server.js"
+[2025-03-30T14:08:01.846Z] read_file called with: "package.json"
+[2025-03-30T14:08:05.481Z] read_file called with: ".env.example"
+[2025-03-30T14:08:05.481Z] Error in read_file: ENOENT: no such file or directory, stat 'D:\My_World\mcp\azureDevops\mcp-file-server\.env.example'
+[2025-03-30T14:09:50.812Z] write_file called with path: "git_commands.js"
+[2025-03-30T14:09:54.108Z] read_file called with: "mcp_server.js"
+[2025-03-30T14:10:35.543Z] write_file called with path: "mcp_server.js"
+[2025-03-30T14:10:39.175Z] read_file called with: "README.md"
+[2025-03-30T14:11:04.333Z] write_file called with path: "README.md"
+[2025-03-30T14:11:10.166Z] write_file called with path: "package.json"
+[2025-03-30T14:11:21.570Z] write_file called with path: "examples/git_examples.js"
+[2025-03-30T14:13:48.503Z] write_file called with path: "services/fileService.js"
+[2025-03-30T14:14:04.090Z] write_file called with path: "services/gitService.js"
+[2025-03-30T14:14:12.337Z] write_file called with path: "services/loggerService.js"
+[2025-03-30T14:14:41.356Z] write_file called with path: "services/toolService.js"
+[2025-03-30T14:14:49.649Z] write_file called with path: "services/configService.js"
+[2025-03-30T14:15:04.742Z] write_file called with path: "mcp_server.js"
+[2025-03-30T14:15:10.588Z] write_file called with path: "package.json"
+[2025-03-30T14:15:14.237Z] write_file called with path: "files/.gitkeep"
+[2025-03-30T14:15:17.265Z] write_file called with path: "log/.gitkeep"
+[2025-03-30T14:15:21.076Z] read_file called with: "README.md"
+[2025-03-30T14:17:05.367Z] write_file called with path: "README.md"
+[2025-03-30T14:23:15.230Z] Logger initialized
+[2025-03-30T14:23:15.231Z] Starting MCP server...
+[2025-03-30T14:23:15.233Z] Directory ensured at: D:/My_World/mcp/azureDevops/mcp-file-server
+[2025-03-30T14:23:15.233Z] Using BASE_DIRECTORY: D:/My_World/mcp/azureDevops/mcp-file-server
+[2025-03-30T14:23:15.234Z] Connecting to transport...
+[2025-03-30T14:23:15.235Z] Server successfully connected and started
+[2025-03-30T14:23:17.775Z] Logger initialized
+[2025-03-30T14:23:17.777Z] Starting MCP server...
+[2025-03-30T14:23:17.779Z] Directory ensured at: D:/My_World/mcp/azureDevops/mcp-file-server
+[2025-03-30T14:23:17.779Z] Using BASE_DIRECTORY: D:/My_World/mcp/azureDevops/mcp-file-server
+[2025-03-30T14:23:17.781Z] Connecting to transport...
+[2025-03-30T14:23:17.782Z] Server successfully connected and started
