@@ -1,0 +1,18 @@
+[2025-03-30T07:26:04.559Z] Starting MCP server...
+[2025-03-30T07:26:04.561Z] Base directory ensured at: D:/My_World/mcp/azureDevops/mcp-file-server
+[2025-03-30T07:26:04.561Z] Using BASE_DIRECTORY: D:/My_World/mcp/azureDevops/mcp-file-server
+[2025-03-30T07:26:04.562Z] Connecting to transport...
+[2025-03-30T07:26:04.563Z] Server successfully connected and started
+[2025-03-30T07:26:07.122Z] Starting MCP server...
+[2025-03-30T07:26:07.125Z] Base directory ensured at: D:/My_World/mcp/azureDevops/mcp-file-server
+[2025-03-30T07:26:07.125Z] Using BASE_DIRECTORY: D:/My_World/mcp/azureDevops/mcp-file-server
+[2025-03-30T07:26:07.127Z] Connecting to transport...
+[2025-03-30T07:26:07.127Z] Server successfully connected and started
+[2025-03-30T07:26:41.890Z] list_files called with: ""
+[2025-03-30T07:26:44.172Z] list_files called with: "files"
+[2025-03-30T07:26:46.335Z] list_files called with: "log"
+[2025-03-30T07:26:50.470Z] read_file called with: "mcp_server.js"
+[2025-03-30T07:26:53.288Z] read_file called with: "package.json"
+[2025-03-30T07:26:56.444Z] read_file called with: "log/mcp_debug.log"
+[2025-03-30T07:26:58.716Z] read_file called with: ".gitignore"
+[2025-03-30T07:28:17.333Z] write_file called with path: "README.md"
