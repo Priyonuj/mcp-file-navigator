@@ -96,42 +96,6 @@ Below is an example configuration object for integrating the MCP File Server wit
 - `disabled`: Whether this server is currently disabled (false = enabled)
 - `autoApprove`: List of tools that should be auto-approved without requiring user confirmation
 
-### Integrating with Claude Desktop
-
-To integrate MCP File Server with Claude Desktop:
-
-1. Install Claude Desktop if you haven't already
-2. Start the MCP server or configure it to start automatically
-3. Configure Claude Desktop:
-   - Open Claude Desktop
-   - Click on Settings (gear icon)
-   - Select "MCP Tools" from the sidebar
-   - Click "Add MCP Server Configuration"
-   - Add the configuration similar to the example above
-   - Adjust paths to match your installation location
-   - Save the configuration
-4. Restart Claude Desktop
-5. You should now see the file operations tools available in Claude's interface
-6. Test the connection by asking Claude to list files or read a file
-7. You can now set your base directory directly in chat with: "Set the base directory to /path/of/your/choice"
-
-### Integrating with Cursor
-
-To integrate MCP File Server with Cursor:
-
-1. Install Cursor if you haven't already
-2. Start the MCP server or configure it to start automatically
-3. Configure Cursor:
-   - Open Cursor
-   - Go to Settings > AI > MCP Configuration
-   - Add a new MCP server configuration
-   - Enter the configuration details similar to the example above
-   - Adjust paths to match your installation location
-   - Save the configuration
-4. Restart Cursor
-5. You can now use file operation commands within Cursor's AI assistant interface
-6. Test by asking the assistant to list files or read a specific file
-7. You can now set your base directory directly in chat with: "Set the base directory to /path/of/your/choice"
 
 ## API Reference
 
